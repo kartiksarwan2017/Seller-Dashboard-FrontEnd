@@ -21,13 +21,18 @@ const CreateCategory = () => {
    }
 
    const response = await axios.post(`http://localhost:5000/api/seller/store/add-category/${sellerId}/${storeId}`, categoryDetails);
-   console.log(response);
+   console.log(response.data.categoryAdded._id);
 
    Swal.fire({
      title: `<strong>${response.data.message}</strong>`,
      icon: 'success',
      showCloseButton: true
-     });
+    });
+
+    setTimeout(() => {
+      localStorage.setItem("categoryId", response.data.categoryAdded._id);
+      window.location = "/";	
+   }, 1000);
 
  }catch(error){
 

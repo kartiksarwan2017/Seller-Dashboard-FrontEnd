@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import CreateStore from './components/CreateStore/CreateStore';
 import CreateCategory from './components/CreateCategory/CreateCategory';
+import CreateSubCategory from "./components/CreateSubCategory/CreateSubCategory";
+import CreateInventory from "./components/CreateInventory/CreateInventory";
 import './App.css';
 
 
@@ -30,6 +32,8 @@ function App() {
           <Route exact path="/register" element={<SignUp />} />
           <Route exact path={`/createStore/:sellerId`} element={<CreateStore />} />
           <Route exact path={`/createCategory/:sellerId/:storeId`} element={<CreateCategory />} />
+          <Route exact path={`/createSubCategory/:sellerId/:categoryId`} element={<CreateSubCategory />} />
+          <Route exact path={`/createInventory/:sellerId/:categoryId`} element={<CreateInventory />} />
         </Routes>
       </Router>
       <Footer />
