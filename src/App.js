@@ -33,7 +33,7 @@ function App() {
           <Route exact path={`/createStore/:sellerId`} element={<CreateStore />} />
           <Route exact path={`/createCategory/:sellerId/:storeId`} element={<CreateCategory />} />
           <Route exact path={`/createSubCategory/:sellerId/:categoryId`} element={<CreateSubCategory />} />
-          <Route exact path={`/createInventory/:sellerId/:categoryId`} element={<CreateInventory />} />
+          <Route exact path={`/createInventory/:categoryId/:subCategoryId`} element={<CreateInventory />} />
         </Routes>
       </Router>
       <Footer />

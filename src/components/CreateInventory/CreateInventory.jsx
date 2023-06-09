@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import  Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from 'sweetalert2';
 

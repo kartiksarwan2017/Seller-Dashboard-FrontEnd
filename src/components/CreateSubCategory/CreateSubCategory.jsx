@@ -32,10 +32,10 @@ const CreateSubCategory = () => {
      });
 
 
-  //    setTimeout(() => {
-  //     localStorage.setItem("subCategoryId", response.data.categoryAdded._id);
-  //     window.location = "/";	
-  //  }, 1000);
+     setTimeout(() => {
+      localStorage.setItem("subCategoryId", response.data.subCategoryAdded._id);
+      window.location = "/";	
+   }, 1000);
 
  }catch(error){
 
