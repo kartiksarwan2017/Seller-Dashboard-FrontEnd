@@ -11,9 +11,6 @@ const SearchSeller = () => {
     const [category, setCategory] = useState([]);
     const [subCategory, setSubCategory] = useState([]);
 
-    console.log("subCategory", subCategory);
-    console.log("category", category);
-
     useEffect(() => {
         
         const getSpecificSeller = async () => {
@@ -27,8 +24,6 @@ const SearchSeller = () => {
             setSubCategory(subCategory);
 
         } 
-
-
     
         getSpecificSeller();
     }, []);

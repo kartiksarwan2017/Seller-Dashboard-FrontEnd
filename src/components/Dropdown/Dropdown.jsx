@@ -18,9 +18,6 @@ const Dropdown = ({items, title }) => {
   const [subCategorySelected, setSubCategorySelected] = useState("");
   const [inventoryList, setInventoryList] = useState([]);
 
-  console.log("subCategoryId", subCategoryId)
-  console.log("inventoryList", inventoryList)
-
   useEffect(() => {
       
       const getSpecificSeller = async () => {
@@ -37,7 +34,7 @@ const Dropdown = ({items, title }) => {
 
       const getInventoryList = async () => {
         if(subCategoryId !== ""){
-        const response = await axios.get(`http://localhost:8000/api/seller/store/all-inventories/${subCategoryId}`);
+        const response = await axios.get(`https://seller-dashboard-backend.onrender.com/api/seller/store/all-inventories/${subCategoryId}`);
         setInventoryList(response.data.inventoryList);
         }
     }
