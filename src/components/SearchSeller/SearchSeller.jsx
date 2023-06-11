@@ -1,12 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Dropdown from "../Dropdown/Dropdown";
+
+
 
 const SearchSeller = () => {
 
     const {sellerId} = useParams();
     const [category, setCategory] = useState([]);
     const [subCategory, setSubCategory] = useState([]);
+
 
     console.log("subCategory", subCategory);
     console.log("category", category);
@@ -18,21 +22,21 @@ const SearchSeller = () => {
                 sellerDetails: {
                     category, subCategory
                 }
-            }} = await axios.get(`https://divisha-tech-backend.onrender.com/api/seller/${sellerId}`);
+            }} = await axios.get(`https://seller-dashboard-backend.onrender.com/api/seller/${sellerId}`);
 
             setCategory(category);
             setSubCategory(subCategory);
 
-            // const response = await axios.get(`https://divisha-tech-backend.onrender.com/api/seller/${sellerId}`);
-            // console.log(response);
         } 
-
         getSpecificSeller();
     }, []);
 
   return (
     <>
      <div className='search-seller-container'> 
+
+     <Dropdown  items={category} title="category"  />
+     <Dropdown  items={subCategory} title="SubCategory"  />
       
      </div>
     </>
