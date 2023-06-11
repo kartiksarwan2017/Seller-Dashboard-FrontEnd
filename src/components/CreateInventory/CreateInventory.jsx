@@ -30,7 +30,7 @@ const CreateInventory = () => {
        "productImage": productImage
    }
 
-   const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/add-inventory/${categoryId}/${subCategoryId}`, inventoryDetails);
+   const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/add-inventory/${categoryId}/${subCategoryId}`, inventoryDetails);
    console.log(response);
 
    Swal.fire({
@@ -38,6 +38,11 @@ const CreateInventory = () => {
      icon: 'success',
      showCloseButton: true
      });
+
+
+     setTimeout(() => {
+      window.location = "/home";	
+   }, 1000); 
 
  }catch(error){
 

@@ -21,7 +21,7 @@ const CreateSubCategory = () => {
        "subCategoryName": subCategoryName,
    }
 
-   const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/add-sub-category/${sellerId}/${categoryId}`, subCategoryDetails);
+   const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/add-sub-category/${sellerId}/${categoryId}`, subCategoryDetails);
    console.log(response);
    console.log(response.data.subCategoryAdded._id);
 
@@ -34,7 +34,7 @@ const CreateSubCategory = () => {
 
      setTimeout(() => {
       localStorage.setItem("subCategoryId", response.data.subCategoryAdded._id);
-      window.location = "/";	
+      window.location = "/home";	
    }, 1000);
 
  }catch(error){

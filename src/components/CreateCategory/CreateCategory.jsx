@@ -20,7 +20,7 @@ const CreateCategory = () => {
        "categoryName": categoryName,
    }
 
-   const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/add-category/${sellerId}/${storeId}`, categoryDetails);
+   const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/add-category/${sellerId}/${storeId}`, categoryDetails);
    console.log(response.data.categoryAdded._id);
 
    Swal.fire({
@@ -31,7 +31,7 @@ const CreateCategory = () => {
 
     setTimeout(() => {
       localStorage.setItem("categoryId", response.data.categoryAdded._id);
-      window.location = "/";	
+      window.location = "/home";	
    }, 1000);
 
  }catch(error){

@@ -25,7 +25,7 @@ const CreateStore = () => {
               "storeTiming": storeTiming
           }
 
-          const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/create/${sellerId}`, storeDetails);
+          const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/create/${sellerId}`, storeDetails);
           console.log(response);
           console.log(response.data.storeAdded._id);
 
@@ -38,7 +38,7 @@ const CreateStore = () => {
 
             setTimeout(() => {
               localStorage.setItem("storeId", response.data.storeAdded._id);
-              window.location = "/";	
+              window.location = "/home";	
            }, 1000);
 
         }catch(error){
