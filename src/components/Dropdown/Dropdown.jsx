@@ -4,6 +4,7 @@ import {IoMdArrowDropdown} from "react-icons/io";
 import {BiUserPin} from "react-icons/bi";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import InventoryList from '../InventoryList/InventoryList';
 
 const Dropdown = ({items, title }) => { 
 
@@ -12,10 +13,13 @@ const Dropdown = ({items, title }) => {
   const {sellerId} = useParams();
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
+  const [subCategoryId, setSubCategoryId] = useState("");
   const [categorySelected, setCategorySelected] = useState("");
   const [subCategorySelected, setSubCategorySelected] = useState("");
+  const [inventoryList, setInventoryList] = useState([]);
 
-
+  console.log("subCategoryId", subCategoryId)
+  console.log("inventoryList", inventoryList)
 
   useEffect(() => {
       
@@ -28,11 +32,19 @@ const Dropdown = ({items, title }) => {
 
           setCategory(category);
           setSubCategory(subCategory);
-          console.log("subCategory.inventory", subCategory.inventory);
 
       } 
+
+      const getInventoryList = async () => {
+        if(subCategoryId !== ""){
+        const response = await axios.get(`http://localhost:8000/api/seller/store/all-inventories/${subCategoryId}`);
+        setInventoryList(response.data.inventoryList);
+        }
+    }
+
+      getInventoryList();
       getSpecificSeller();
-  }, []);
+  }, [subCategoryId]);
 
   const handleItemClick = (item) => { 
    if(item.categoryName){
@@ -42,6 +54,8 @@ const Dropdown = ({items, title }) => {
    }else{
     setSelectedItem(item.subCategoryName); 
     setSubCategorySelected(item.subCategoryName);
+    localStorage.setItem("selectedSubcategory", item._id);
+    setSubCategoryId(localStorage.getItem("selectedSubcategory"));
     setIsOpen(false); 
    }
   }; 
@@ -81,6 +95,7 @@ const Dropdown = ({items, title }) => {
       )} 
 
 
+      <InventoryList inventory={inventoryList} />
 
     </div> 
   ); 

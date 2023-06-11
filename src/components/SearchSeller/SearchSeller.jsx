@@ -11,7 +11,6 @@ const SearchSeller = () => {
     const [category, setCategory] = useState([]);
     const [subCategory, setSubCategory] = useState([]);
 
-
     console.log("subCategory", subCategory);
     console.log("category", category);
 
@@ -28,6 +27,9 @@ const SearchSeller = () => {
             setSubCategory(subCategory);
 
         } 
+
+
+    
         getSpecificSeller();
     }, []);
 
