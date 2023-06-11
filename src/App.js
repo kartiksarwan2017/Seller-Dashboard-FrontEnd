@@ -1,28 +1,22 @@
+import { lazy, Suspense} from "react";
 import {Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
-import Login from "./components/Login/Login";
-import SignUp from "./components/SignUp/SignUp";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-import CreateStore from './components/CreateStore/CreateStore';
-import CreateCategory from './components/CreateCategory/CreateCategory';
-import CreateSubCategory from "./components/CreateSubCategory/CreateSubCategory";
-import CreateInventory from "./components/CreateInventory/CreateInventory";
-import SearchSeller from './components/SearchSeller/SearchSeller';
-
 import './App.css';
 
+const Login = lazy(() => import("./components/Login/Login"));
+const SignUp = lazy(() => import("./components/SignUp/SignUp"));
+const Header = lazy(() => import("./components/Header/Header"));
+const Footer = lazy(() => import("./components/Footer/Footer"));
+const Home = lazy(() => import("./components/Home/Home"));
+const CreateStore = lazy(() => import("./components/CreateStore/CreateStore"));
+const CreateCategory = lazy(() => import("./components/CreateCategory/CreateCategory"));
+const CreateSubCategory = lazy(() => import("./components/CreateSubCategory/CreateSubCategory"));
+const CreateInventory = lazy(() => import("./components/CreateInventory/CreateInventory"));
+const SearchSeller = lazy(() => import("./components/SearchSeller/SearchSeller"));
+
+
+
 function App() {
-
-  const [sellerId, setSellerId] = useState("");
-
-  useEffect(() => {
-    setSellerId(localStorage.getItem("sellerId"));
-  }, []);
-
-  console.log("seller ID", sellerId);
 
   return (
     <div className="App">

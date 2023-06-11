@@ -25,7 +25,7 @@ const SignUp = () => {
 		try {
 
 			const url = "https://seller-dashboard-backend.onrender.com/api/seller/register";
-			const { data: res } = await axios.post(url, data);
+			await axios.post(url, data);
 
 			Swal.fire({
 				title: `User Created Sucessfully!`,

@@ -3,13 +3,11 @@ import Swal from 'sweetalert2';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import axios from 'axios';
 import {Link} from "react-router-dom";
 
 const Header = () => {
 
   const [sellerId, setSellerId] = useState("");
-  const [authenticated, setauthenticated] = useState(null);
 
   useEffect(() => {
     setSellerId(localStorage.getItem("sellerId"));
