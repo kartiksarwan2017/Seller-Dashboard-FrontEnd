@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
 const CreateCategory = () => {
 
     const {sellerId, storeId} = useParams();
-    console.log(sellerId, " ", storeId);
 
 	const [categoryName, setCategoryName] = useState("");
 
@@ -21,7 +20,6 @@ const CreateCategory = () => {
    }
 
    const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/add-category/${sellerId}/${storeId}`, categoryDetails);
-   console.log(response.data.categoryAdded._id);
 
    Swal.fire({
      title: `<strong>${response.data.message}</strong>`,

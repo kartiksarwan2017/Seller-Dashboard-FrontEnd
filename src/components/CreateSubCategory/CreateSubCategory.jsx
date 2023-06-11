@@ -9,9 +9,6 @@ import Swal from 'sweetalert2';
 const CreateSubCategory = () => {
 
   const {sellerId, categoryId} = useParams();
-  console.log(sellerId, " ", sellerId);
-  console.log(categoryId , " ", categoryId);
-
   const [subCategoryName, setSubCategoryName] = useState("");
 
   const addNewSubCategory = async () => {
@@ -22,8 +19,6 @@ const CreateSubCategory = () => {
    }
 
    const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/add-sub-category/${sellerId}/${categoryId}`, subCategoryDetails);
-   console.log(response);
-   console.log(response.data.subCategoryAdded._id);
 
    Swal.fire({
      title: `<strong>${response.data.message}</strong>`,

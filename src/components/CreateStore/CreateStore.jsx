@@ -9,8 +9,6 @@ import Swal from 'sweetalert2';
 const CreateStore = () => {
 
     const {sellerId} = useParams();
-    console.log(sellerId);
-
     const [gst, setGst] = useState("");
     const [logo, setLogo] = useState("");
     const [storeTiming, setStoreTiming] = useState("");
@@ -26,9 +24,6 @@ const CreateStore = () => {
           }
 
           const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/create/${sellerId}`, storeDetails);
-          console.log(response);
-          console.log(response.data.storeAdded._id);
-
 
           Swal.fire({
             title: `<strong>${response.data.message}</strong>`,

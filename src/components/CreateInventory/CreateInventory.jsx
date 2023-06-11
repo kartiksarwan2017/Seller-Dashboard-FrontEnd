@@ -31,7 +31,6 @@ const CreateInventory = () => {
    }
 
    const response = await axios.post(`https://seller-dashboard-backend.onrender.com/api/seller/store/add-inventory/${categoryId}/${subCategoryId}`, inventoryDetails);
-   console.log(response);
 
    Swal.fire({
      title: `<strong>${response.data.message}</strong>`,
