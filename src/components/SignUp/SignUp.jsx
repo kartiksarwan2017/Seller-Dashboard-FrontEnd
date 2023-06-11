@@ -24,7 +24,7 @@ const SignUp = () => {
 		e.preventDefault();
 		try {
 
-			const url = "http://localhost:5000/api/seller/register";
+			const url = "https://seller-dashboard-backend.onrender.com/api/seller/register";
 			const { data: res } = await axios.post(url, data);
 
 			Swal.fire({

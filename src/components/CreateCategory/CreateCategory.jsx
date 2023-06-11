@@ -20,7 +20,7 @@ const CreateCategory = () => {
        "categoryName": categoryName,
    }
 
-   const response = await axios.post(`http://localhost:5000/api/seller/store/add-category/${sellerId}/${storeId}`, categoryDetails);
+   const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/add-category/${sellerId}/${storeId}`, categoryDetails);
    console.log(response.data.categoryAdded._id);
 
    Swal.fire({

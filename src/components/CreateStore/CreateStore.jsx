@@ -25,7 +25,7 @@ const CreateStore = () => {
               "storeTiming": storeTiming
           }
 
-          const response = await axios.post(`http://localhost:5000/api/seller/store/create/${sellerId}`, storeDetails);
+          const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/create/${sellerId}`, storeDetails);
           console.log(response);
           console.log(response.data.storeAdded._id);
 

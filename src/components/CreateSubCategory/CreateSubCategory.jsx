@@ -21,7 +21,7 @@ const CreateSubCategory = () => {
        "subCategoryName": subCategoryName,
    }
 
-   const response = await axios.post(`http://localhost:5000/api/seller/store/add-sub-category/${sellerId}/${categoryId}`, subCategoryDetails);
+   const response = await axios.post(`https://divisha-tech-backend.onrender.com/api/seller/store/add-sub-category/${sellerId}/${categoryId}`, subCategoryDetails);
    console.log(response);
    console.log(response.data.subCategoryAdded._id);
 

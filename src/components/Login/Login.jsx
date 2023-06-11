@@ -16,7 +16,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/seller/login";
+			const url = "https://seller-dashboard-backend.onrender.com/api/seller/login";
 			const res = await axios.post(url, data);
 			console.log(res);
 
@@ -29,7 +29,7 @@ const Login = () => {
 			setTimeout(() => {
 			   localStorage.setItem("token", res.data.data);
 			   localStorage.setItem("sellerId", res.data.seller);
-			   window.location = "/";	
+			   window.location = "/home";	
 			}, 1000);
 	
 		} catch (error) {
