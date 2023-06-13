@@ -24,9 +24,6 @@ const Home = () => {
  
   }, [authenticated]);
 
-console.log("subCategoryId", subCategoryId);
-
-
 if (localStorage.getItem("token") === null) {
   return <Navigate replace to="/login" />;
 } else{

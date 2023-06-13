@@ -54,6 +54,11 @@ const CreateStore = () => {
     <>
      <div className='store-container'>
 
+
+      <div className="heading">
+        <h1>Create Store</h1>
+      </div>
+
      <Container style={{padding: "7%"}}>
           <Form onSubmit={(e) => e.preventDefault()}>
 

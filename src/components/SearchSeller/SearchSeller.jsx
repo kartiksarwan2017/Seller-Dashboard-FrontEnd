@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Dropdown from "../Dropdown/Dropdown";
-
+import "./SearchSeller.scss";
 
 
 const SearchSeller = () => {

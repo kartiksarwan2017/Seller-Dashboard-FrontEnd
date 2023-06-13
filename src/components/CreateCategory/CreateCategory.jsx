@@ -48,6 +48,12 @@ const CreateCategory = () => {
   return (
    <>
     <div className="category-container">
+
+    <div className="heading">
+        <h1>Create Category</h1>
+    </div>
+
+
     <Container style={{padding: "7%"}}>
           <Form onSubmit={(e) => e.preventDefault()}>
 

@@ -47,7 +47,12 @@ const CreateSubCategory = () => {
 
   return (
     <>
-     <div>
+     <div className='subcategory-container'>
+      
+     <div className="heading">
+        <h1>Create Sub Category</h1>
+      </div>
+
      <Container style={{padding: "7%"}}>
           <Form onSubmit={(e) => e.preventDefault()}>
 

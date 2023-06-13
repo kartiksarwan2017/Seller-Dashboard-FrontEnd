@@ -59,7 +59,12 @@ const CreateInventory = () => {
 
   return (
     <>
-    <div>
+    <div className='new-inventory-container'>
+
+    <div className="heading">
+        <h1>Create Inventory</h1>
+    </div>
+
 
     <Container style={{padding: "7%"}}>
           <Form onSubmit={(e) => e.preventDefault()}>

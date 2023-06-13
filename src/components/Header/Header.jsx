@@ -35,7 +35,7 @@ const Header = () => {
      <div className='header-container'>
      <Navbar bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Seller Dashboard</Navbar.Brand>
+          <Navbar.Brand href="/home">Seller Dashboard</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link className="nav-link" href="/home">Home</Nav.Link>
             <Nav.Link className="nav-link" href={`/getSpecificSeller/${sellerId}`}>Specific Seller</Nav.Link>
