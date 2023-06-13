@@ -1,4 +1,4 @@
-import { lazy, Suspense} from "react";
+import { lazy} from "react";
 import {Routes, Route } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import './App.css';
@@ -22,10 +22,10 @@ function App() {
     <div className="App">
       <Header />
         <Routes>
-          <Route exact path="/home" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
-          <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path="/register" element={<SignUp />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route path="/" element={<Navigate replace to="/home" />} />
           <Route exact path={`/createStore/:sellerId`} element={<CreateStore />} />
           <Route exact path={`/createCategory/:sellerId/:storeId`} element={<CreateCategory />} />
           <Route exact path={`/createSubCategory/:sellerId/:categoryId`} element={<CreateSubCategory />} />
