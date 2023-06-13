@@ -1,4 +1,11 @@
 * {
   padding: 0;
   margin: 0;
+  
+}
+
+body{
+  background: url('https://img.freepik.com/premium-photo/sahasrara-chakra-symbol-purple-background-this-is-seventh-chakra-also-called-crown-chakra_72967-796.jpg');
+  background-repeat: repeat-y;
+  background-size: 100vw 200vh;
 }
