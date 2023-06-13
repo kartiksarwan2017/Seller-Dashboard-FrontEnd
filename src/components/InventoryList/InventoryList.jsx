@@ -1,15 +1,17 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import "./InventoryList.scss";
 
 const InventoryList = ({ inventory }) => {
   return (
     <>
-      <div>
+      <div className="inventorylist-container">
         {inventory.map((item, index) => {
           return (
-            <Card style={{ width: "18rem"}}>
-              <Card.Img variant="top" src={item.productImage} />
+            <div className="inventory-list" key={index}>
+              <Card style={{ width: "18rem"}} className="inventory-card">
+              <Card.Img variant="top" src={item.productImage} className="inventory-img" />
               <Card.Body>
                 <Card.Title>{item.productName}</Card.Title>
               </Card.Body>
@@ -28,6 +30,7 @@ const InventoryList = ({ inventory }) => {
                   </ListGroup.Item>
               </ListGroup>
             </Card>
+            </div>
           );
         })}
       </div>

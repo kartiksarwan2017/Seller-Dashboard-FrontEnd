@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import { useParams } from "react-router";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import "./CreateCategory.scss";
 
 const CreateCategory = () => {
 

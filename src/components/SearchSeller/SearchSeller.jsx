@@ -20,9 +20,6 @@ const SearchSeller = () => {
                 }
             }} = await axios.get(`https://seller-dashboard-backend.onrender.com/api/seller/${sellerId}`);
 
-    
-            console.log("category", category, "subCategory", subCategory);
-
             setCategory(category);
             setSubCategory(subCategory);
 
@@ -35,7 +32,7 @@ const SearchSeller = () => {
     <>
      <div className='search-seller-container'> 
 
-     <Dropdown  items={category} title="category"  />
+     <Dropdown  items={category} title="Category"  />
      <Dropdown  items={subCategory} title="SubCategory"  />
       
      </div>

@@ -60,11 +60,9 @@ const Dropdown = ({items, title }) => {
   }; 
 
   return ( 
-
-
     <div className="dropdown"> 
 
-    <h1>Select the {title} from dropdown?</h1>
+    <h1>Select {title}</h1>
 
     {selectedItem && ( 
         <p className="dropdown__selectedItem"> 

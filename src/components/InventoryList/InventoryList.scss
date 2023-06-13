@@ -1,0 +1,26 @@
+.inventorylist-container {
+
+    display: flex;
+    margin-left: 5rem;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .inventory-list{
+
+        margin-top: 4rem;
+
+        .inventory-card{
+            height: 550px;
+        }
+
+    
+        .inventory-img{
+            height: 300px;
+        }
+    
+    }
+}
+
+.footer-container{
+    margin-top: 50vh;
+}

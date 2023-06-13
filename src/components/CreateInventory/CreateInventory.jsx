@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import "./CreateInventory.scss";
 
 
 const CreateInventory = () => {
