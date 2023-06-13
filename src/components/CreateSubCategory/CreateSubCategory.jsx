@@ -56,7 +56,7 @@ const CreateSubCategory = () => {
           </Form.Group>
 
             <Button variant="primary" type="submit" onClick={addNewSubCategory}>
-              Create Category
+              Create Sub Category
             </Button>
           </Form>
         </Container>

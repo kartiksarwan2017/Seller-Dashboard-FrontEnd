@@ -27,6 +27,8 @@ const Dropdown = ({items, title }) => {
               }
           }} = await axios.get(`https://seller-dashboard-backend.onrender.com/api/seller/${sellerId}`);
 
+          console.log(category, subCategory)
+
           setCategory(category);
           setSubCategory(subCategory);
 

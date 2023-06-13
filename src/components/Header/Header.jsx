@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from "react-router-dom";
+import "./Header.scss";
 
 const Header = () => {
 
@@ -36,13 +37,13 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="#home">Seller Dashboard</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href={`/getSpecificSeller/${sellerId}`}>Specific Seller</Nav.Link>
+            <Nav.Link className="nav-link" href="/home">Home</Nav.Link>
+            <Nav.Link className="nav-link" href={`/getSpecificSeller/${sellerId}`}>Specific Seller</Nav.Link>
           </Nav>
 
           {
               localStorage.getItem("token") !== null &&      
-              <button className='white_btn' onClick={handleLogout}>Logout</button> 
+              <button className='logout-btn' onClick={handleLogout}>Logout</button> 
           }
 
           {

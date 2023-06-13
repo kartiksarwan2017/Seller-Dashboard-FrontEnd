@@ -89,7 +89,7 @@ const CreateInventory = () => {
           </Form.Group>
 
             <Button variant="primary" type="submit" onClick={addNewInventory}>
-              Create Category
+              Create Inventory
             </Button>
           </Form>
     </Container>

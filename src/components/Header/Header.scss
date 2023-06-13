@@ -1,3 +1,27 @@
 .header-container {
-    
+
+
+    .nav-link {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .nav-link:hover{
+        color: white;
+    }
+
+
+    .logout-btn{
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        background-color: red;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+    }
+
+    .logout-btn:hover{
+        background-color: crimson;
+    }
 }
