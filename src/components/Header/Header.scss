@@ -24,4 +24,22 @@
     .logout-btn:hover{
         background-color: crimson;
     }
+
+
+    .nav-btn-container{
+        .nav-btn{
+            padding: 10px;
+            border: none;
+            margin-left: 50px;
+            border-radius: 10px;
+            background-color: lightseagreen;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
 }
